@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+class Main {
+	public static void main(String[] args) throws Exception {
+		// 정수 N
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		// 수열을 구하는 정수 N개
+		String[] arr1 = br.readLine().split(" ");
+		// 정수 M
+		int M = Integer.parseInt(br.readLine());
+		// 수열을 구하는 정수 M개
+		String[] arr2 = br.readLine().split(" ");
+
+		Set<String> set1 = new HashSet<>(Arrays.asList(arr1));
+
+		for(String element : arr2){
+			if(set1.contains(element)){
+				System.out.println("1");
+			}else{
+				System.out.println("0");
+			}
+		}
+
+	}
+}
